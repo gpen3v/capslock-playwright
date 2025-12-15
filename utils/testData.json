@@ -1,0 +1,53 @@
+{
+  "endpoints": {
+    "handleForm": "/test-task/handle-form",
+    "thankyou": "/thankyou"
+  },
+
+  "webformTestData": {
+    "zipCode": "55555",
+    "zipCodeWrong": "666666",
+    "zipCodeNoInstallation": "11111",
+    "name": "FirstName LastName",
+    "nameWrong": "FirstName",
+    "email": "testemail@example.com",
+    "emailWrong": "testemail",
+    "phone": "0123456789",
+    "phoneWrong": "012345678",
+
+    "step2Cards": [
+      "Independence",
+      "Safety",
+      "Therapy",
+      "Other"
+    ],
+
+    "step3Cards": [
+      "Owned House / Condo",
+      "Rental Property",
+      "Mobile Home"
+    ],
+
+    "webformSteps": [
+      "What is your ZIP Code?",
+      "Why are you interested in a walk-in tub?",
+      "What type of property is this for?",
+      "Who should we prepare this FREE estimate for?",
+      "LAST STEP!",
+      "Sorry, unfortunately we don’t yet install in your area but if you’d like us to notify you when we do please enter your email address below",
+      "Thank you for your interest, we will contact you when our service becomes available in your area!"
+    ]
+  },
+  "webformValidations": {
+    "emptyZipCode": "Enter your ZIP code.",
+    "wrongZipCode": "Wrong ZIP code.",
+    "chooseVariant": "Choose one of the variants.",
+    "enterName": "Please enter your name.",
+    "fullNameRequired": "Your full name should contain both first and last name.",
+    "enterPhoneNumber": "Enter your phone number.",
+    "wrongPhoneNumber": "Wrong phone number.",
+    "enterEmailAddress": "Enter your email address.",
+    "wrongEmail": "Wrong email."
+  } 
+}
+

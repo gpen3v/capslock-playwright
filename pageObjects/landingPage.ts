@@ -84,7 +84,7 @@ export class LandingPage {
         }
 
         const data = await response.json();
-        await expect(this.location).toHaveText(`Available in ${data.city}`);
+        await expect.soft(this.location).toHaveText(`Available in ${data.region}`);
     }
 
     /**

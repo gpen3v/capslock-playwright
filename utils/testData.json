@@ -1,7 +1,8 @@
 {
   "endpoints": {
     "handleForm": "/test-task/handle-form",
-    "thankyou": "/thankyou"
+    "thankyou": "/thankyou",
+    "location": "https://ipapi.co/json/"
   },
 
   "webformTestData": {

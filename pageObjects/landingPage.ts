@@ -1,5 +1,6 @@
 import { Page, Locator, expect, APIRequestContext } from '@playwright/test';
 import { Webform } from './components/webform';
+import { endpoints } from '../utils/testData.json'
 
 export class LandingPage {
     readonly page: Page;
@@ -72,7 +73,7 @@ export class LandingPage {
      * and verifying it matches the displayed location text on the page.
      */
     async validateLocation() {
-        const response = await this.request.get('https://ipapi.co/json/', {
+        const response = await this.request.get(endpoints.location, {
             headers: {
                 'Accept': 'application/json',
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',

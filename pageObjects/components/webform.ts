@@ -32,7 +32,6 @@ export class Webform {
     this.nextButton = this.webform1.getByRole('button', { name: 'Next' });
     this.goToEstimateButton = this.webform1.getByRole('button', { name: 'Go to Estimate' });
     this.submitButton = this.webform1.getByRole('button', { name: 'Submit Your Request' });
-    this.nextStepButton = this.webform1.getByRole('button', { type: 'submit' } as any);
     this.progressBar = this.webform1.locator('[data-form-progress-value]');
     this.progressCurrentStep = this.webform1.locator('[data-form-progress-current-step]'); 
     this.stepTitle = this.webform1.locator('.stepTitle__hdr');
@@ -42,6 +41,7 @@ export class Webform {
     this.phoneInput = this.webform1.locator('[data-phone-input]');
     this.currentStep = this.webform1.locator('.steps:visible');
     this.currentStepError = this.currentStep.locator('.hasError [data-error-block]');
+    this.nextStepButton = this.currentStep.locator('button[type="submit"]');;
     this.sorryStep = this.webform1.locator('.step-sorry');
     this.sorryEmail = this.sorryStep.locator('[name="email"]');
   }

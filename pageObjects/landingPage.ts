@@ -21,10 +21,8 @@ export class LandingPage {
     readonly healthblockIcon: Locator;
     readonly healthblockTitle: Locator;
     readonly healthblockText: Locator;
-    readonly slider: Locator;
     readonly warantyBlock: Locator;
     readonly howBlock: Locator;
-    readonly howBlockVideo: Locator;
     readonly mobileScrollTrigger: Locator;
     
 
@@ -47,10 +45,8 @@ export class LandingPage {
         this.healthblockIcon = this.page.locator('.healthBlock__icon img');
         this.healthblockTitle = this.page.locator('.healthBlock__hdr');
         this.healthblockText = this.page.locator('.healthBlock__txt');
-        this.slider = page.locator('.sliderControl_type1');
         this.warantyBlock = page.locator('.warranty');
         this.howBlock = page.locator('.howBlock');
-        this.howBlockVideo = this.howBlock.locator('video');
         // Mobile Scroll trigger button
         this.mobileScrollTrigger = this.page.locator('[data-scroll-trigger]');
     }
@@ -61,8 +57,6 @@ export class LandingPage {
      */
     async validateMobileScrollTrigger() {
         await this.mobileScrollTrigger.click()
-        // Wait for scroll animation to complete
-        //await this.page.waitForTimeout(500);
         // Validate that the form container is scrolled into view
         const webform = new Webform(this.page);
         await expect.soft(webform.webform1).toBeInViewport();
